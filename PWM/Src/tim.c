@@ -6,11 +6,11 @@
   ******************************************************************************
   ** This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
-  * USER CODE END. Other portions of this file, whether 
+  * USER CODE END. Other portions of this file, whether
   * inserted by the user or by software development tools
   * are owned by their respective copyright owners.
   *
-  * COPYRIGHT(c) 2018 STMicroelectronics
+  * COPYRIGHT(c) 2022 STMicroelectronics
   *
   * Redistribution and use in source and binary forms, with or without modification,
   * are permitted provided that the following conditions are met:
@@ -324,11 +324,11 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* timHandle)
   /* USER CODE BEGIN TIM2_MspPostInit 0 */
 
   /* USER CODE END TIM2_MspPostInit 0 */
-    /**TIM2 GPIO Configuration    
+    /**TIM2 GPIO Configuration
     PA1     ------> TIM2_CH2
     PA0/WKUP     ------> TIM2_CH1
     PA2     ------> TIM2_CH3
-    PA3     ------> TIM2_CH4 
+    PA3     ------> TIM2_CH4
     */
     GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_0|GPIO_PIN_2|GPIO_PIN_3;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -346,12 +346,12 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* timHandle)
   /* USER CODE BEGIN TIM4_MspPostInit 0 */
 
   /* USER CODE END TIM4_MspPostInit 0 */
-  
-    /**TIM4 GPIO Configuration    
+
+    /**TIM4 GPIO Configuration
     PD15     ------> TIM4_CH4
     PD14     ------> TIM4_CH3
     PD13     ------> TIM4_CH2
-    PD12     ------> TIM4_CH1 
+    PD12     ------> TIM4_CH1
     */
     GPIO_InitStruct.Pin = GPIO_PIN_15|GPIO_PIN_14|GPIO_PIN_13|GPIO_PIN_12;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -369,12 +369,12 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* timHandle)
   /* USER CODE BEGIN TIM5_MspPostInit 0 */
 
   /* USER CODE END TIM5_MspPostInit 0 */
-  
-    /**TIM5 GPIO Configuration    
+
+    /**TIM5 GPIO Configuration
     PI0     ------> TIM5_CH4
     PH12     ------> TIM5_CH3
     PH11     ------> TIM5_CH2
-    PH10     ------> TIM5_CH1 
+    PH10     ------> TIM5_CH1
     */
     GPIO_InitStruct.Pin = GPIO_PIN_0;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -399,12 +399,12 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* timHandle)
   /* USER CODE BEGIN TIM8_MspPostInit 0 */
 
   /* USER CODE END TIM8_MspPostInit 0 */
-  
-    /**TIM8 GPIO Configuration    
+
+    /**TIM8 GPIO Configuration
     PI7     ------> TIM8_CH3
     PI6     ------> TIM8_CH2
     PI5     ------> TIM8_CH1
-    PI2     ------> TIM8_CH4 
+    PI2     ------> TIM8_CH4
     */
     GPIO_InitStruct.Pin = GPIO_PIN_7|GPIO_PIN_6|GPIO_PIN_5|GPIO_PIN_2;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -467,7 +467,7 @@ void HAL_TIM_PWM_MspDeInit(TIM_HandleTypeDef* tim_pwmHandle)
 
   /* USER CODE END TIM8_MspDeInit 1 */
   }
-} 
+}
 
 /* USER CODE BEGIN 1 */
 

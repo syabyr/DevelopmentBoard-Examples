@@ -6,11 +6,11 @@
   ******************************************************************************
   ** This notice applies to any and all portions of this file
   * that are not between comment pairs USER CODE BEGIN and
-  * USER CODE END. Other portions of this file, whether 
+  * USER CODE END. Other portions of this file, whether
   * inserted by the user or by software development tools
   * are owned by their respective copyright owners.
   *
-  * COPYRIGHT(c) 2018 STMicroelectronics
+  * COPYRIGHT(c) 2022 STMicroelectronics
   *
   * Redistribution and use in source and binary forms, with or without modification,
   * are permitted provided that the following conditions are met:
@@ -110,10 +110,10 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef* canHandle)
     if(HAL_RCC_CAN1_CLK_ENABLED==1){
       __HAL_RCC_CAN1_CLK_ENABLE();
     }
-  
-    /**CAN1 GPIO Configuration    
+
+    /**CAN1 GPIO Configuration
     PD0     ------> CAN1_RX
-    PD1     ------> CAN1_TX 
+    PD1     ------> CAN1_TX
     */
     GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -142,10 +142,10 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef* canHandle)
     if(HAL_RCC_CAN1_CLK_ENABLED==1){
       __HAL_RCC_CAN1_CLK_ENABLE();
     }
-  
-    /**CAN2 GPIO Configuration    
+
+    /**CAN2 GPIO Configuration
     PB12     ------> CAN2_RX
-    PB13     ------> CAN2_TX 
+    PB13     ------> CAN2_TX
     */
     GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_13;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -174,15 +174,14 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
 
   /* USER CODE END CAN1_MspDeInit 0 */
     /* Peripheral clock disable */
-    /* Be sure that all peripheral instances that share the same clock need to be disabled */
-    /**  HAL_RCC_CAN1_CLK_ENABLED--;
-    *  if(HAL_RCC_CAN1_CLK_ENABLED==0){
-    *    __HAL_RCC_CAN1_CLK_DISABLE();
-    **/
-  
-    /**CAN1 GPIO Configuration    
+    HAL_RCC_CAN1_CLK_ENABLED--;
+    if(HAL_RCC_CAN1_CLK_ENABLED==0){
+      __HAL_RCC_CAN1_CLK_DISABLE();
+    }
+
+    /**CAN1 GPIO Configuration
     PD0     ------> CAN1_RX
-    PD1     ------> CAN1_TX 
+    PD1     ------> CAN1_TX
     */
     HAL_GPIO_DeInit(GPIOD, GPIO_PIN_0|GPIO_PIN_1);
 
@@ -200,15 +199,14 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
   /* USER CODE END CAN2_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_CAN2_CLK_DISABLE();
-    /* Be sure that all peripheral instances that share the same clock need to be disabled */
-    /**  HAL_RCC_CAN1_CLK_ENABLED--;
-    *  if(HAL_RCC_CAN1_CLK_ENABLED==0){
-    *    __HAL_RCC_CAN1_CLK_DISABLE();
-    **/
-  
-    /**CAN2 GPIO Configuration    
+    HAL_RCC_CAN1_CLK_ENABLED--;
+    if(HAL_RCC_CAN1_CLK_ENABLED==0){
+      __HAL_RCC_CAN1_CLK_DISABLE();
+    }
+
+    /**CAN2 GPIO Configuration
     PB12     ------> CAN2_RX
-    PB13     ------> CAN2_TX 
+    PB13     ------> CAN2_TX
     */
     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_12|GPIO_PIN_13);
 
@@ -219,7 +217,7 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
 
   /* USER CODE END CAN2_MspDeInit 1 */
   }
-} 
+}
 
 /* USER CODE BEGIN 1 */
 

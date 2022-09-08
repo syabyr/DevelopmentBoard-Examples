@@ -1,0 +1,14 @@
+.//Inc/sd_diskio.h:extern const Diskio_drvTypeDef  SD_Driver;
+.//Middlewares/Third_Party/FatFs/src/ff_gen_drv.c:uint8_t FATFS_LinkDriverEx(const Diskio_drvTypeDef *drv, char *path, uint8_t lun)
+.//Middlewares/Third_Party/FatFs/src/ff_gen_drv.c:uint8_t FATFS_LinkDriver(const Diskio_drvTypeDef *drv, char *path)
+.//Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:}Diskio_drvTypeDef;
+.//Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:  const Diskio_drvTypeDef *drv[_VOLUMES];
+.//Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:uint8_t FATFS_LinkDriver(const Diskio_drvTypeDef *drv, char *path);
+.//Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:uint8_t FATFS_LinkDriverEx(const Diskio_drvTypeDef *drv, char *path, BYTE lun);
+Binary file .//build/diskio.o matches
+.//build/sd_diskio.lst:  95:Src/sd_diskio.c **** const Diskio_drvTypeDef  SD_Driver =
+.//build/ff_gen_drv.lst:  69:Middlewares/Third_Party/FatFs/src/ff_gen_drv.c **** uint8_t FATFS_LinkDriverEx(const Diskio_drvTypeDef *drv, char *path, uint8_t lun)
+.//build/ff_gen_drv.lst:  98:Middlewares/Third_Party/FatFs/src/ff_gen_drv.c **** uint8_t FATFS_LinkDriver(const Diskio_drvTypeDef *drv, char *path)
+Binary file .//build/sd_diskio.o matches
+Binary file .//build/ff_gen_drv.o matches
+.//Src/sd_diskio.c:const Diskio_drvTypeDef  SD_Driver =
